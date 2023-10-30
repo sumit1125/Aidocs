@@ -7,10 +7,10 @@
     <title>Solid Template</title>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="./css/style1.css">
 	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
-
 <style>
     /* ===== Google Font Import - Poppins ===== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
@@ -22,7 +22,6 @@
     height: 100vh;
     background-color:1D2026; /* Set the background color of the centered form */
 }
-
 /* Additional CSS for centering the form */
 .container-form {
     max-width: 800px;
@@ -31,8 +30,6 @@
     padding: 30px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-
-
 .container header{
     position: relative;
     font-size: 20px;
@@ -175,6 +172,7 @@ form .buttons button , .backBtn{
         overflow-y: scroll;
     }
     .container form::-webkit-scrollbar{
+        margin: 20px;
        display: none;
     }
     form .fields .input-field{
@@ -187,8 +185,20 @@ form .buttons button , .backBtn{
         width: 100%;
     }
 }
+
+@media (max-width: 490px) {
+    .container-form .form .details.personal .fields {
+        grid-template-columns: 1fr; /* For smaller screens, make it a single column layout */
+    }
+
+    .container-form .form .details.personal .input-field {
+        width: 100%; /* Set input fields to full width within the grid */
+    }
+}
+
 </style>
 <body class="is-boxed has-animations">
+    
     <div class="body-wrap">
         <header class="site-header">
             <div class="container">
@@ -319,7 +329,7 @@ form .buttons button , .backBtn{
                 <!----===== Iconscout CSS ===== -->
                 <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
             
-               <title>Responsive Regisration Form </title>
+               <title> Regisration Form </title>
             </head>
             <body>
                 <div class="centered-form">
